@@ -1,3 +1,51 @@
-
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: "Book Review"
+    header:
+      title: "Book Review"
+      sign_up: "Signup"
+      login: "Login"
+      profile: "Profile"
+      account: "My Account"
+      log_out: "Log out"
+    footer:
+      footer_content: "Footer Content"
+      content: "CONTENT"
+      link: "Links"
+      copy_right: "© 2020 Copyright"
+      author: "Author"
+  static_pages:
+    home:
+      page_heading: "Page Heading"
+      small_text: "Secondary Text"
+      side_widget: "Side Widget"
+      post_title: "Post Title"
+      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!"
+      read_more: "Read More"
+      time_posted: "Posted on January 1, 2017 by"
+      author: "Author"
+      search: "Search"
+      find: "Find!"
+      categories: "Categories"
+  sessions:
+    new:
+      title: "Login"
+      remember_me: "Remember Me"
+      forgot_password: "Forgot Password?"
+      sign_in: "Sign in"
+      not_member: "Not a member? "
+      register: "Register"
+      email: "E-mail"
+      password: "Password"
+  users:
+    new:
+      title: "Sign up"
+      sign_up: "Sign up"
+      validate_pass: "At least 8 characters and 1 digit"
+      validate_confirm: "For two step authentication"
+      sign_in: "Sign in"
+      name: "Your Name"
+      email: "E-mail"
+      password: "Password"
+      password_confirmation: "Password Confirmation"

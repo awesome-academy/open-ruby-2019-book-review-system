@@ -1,0 +1,22 @@
+<% provide :title, t(".title") %>
+<div class="text-center border border-light p-5">
+  <p class="h4 mb-4"><%= t ".sign_up" %></p>
+  <%= form_for :user, url: signup_path do |f| %>
+
+    <%= f.text_field :name, class: "form-control mb-4", placeholder: t(".name") %>
+
+    <%= f.email_field :email, class: "form-control mb-4", placeholder: t(".email") %>
+
+    <%= f.password_field :password, class: "form-control mb-4", placeholder: t(".password")  %>
+      <small class="form-text text-muted mb-4">
+        <%= t ".validate_pass" %>
+      </small>
+
+    <%= f.password_field :password_confirmation, class: "form-control mb-4", placeholder: t(".password_confirmation") %>
+      <small class="form-text text-muted mb-4">
+        <%= t ".validate_confirm" %>
+      </small>
+
+    <%= f.submit t(".sign_in"), class: "btn btn-info mb-4 btn-block" %>
+  <% end %>
+</div>
