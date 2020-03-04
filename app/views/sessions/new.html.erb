@@ -1,0 +1,28 @@
+<% provide :title, t(".title") %>
+<div class="text-center border border-light p-5">
+  <p class="h4 mb-4"><%= t ".title" %></p>
+  <%= form_for :session, url: login_path do |f| %>
+
+      <%= f.email_field :email, class: "form-control mb-4", placeholder: t(".email") %>
+
+      <%= f.password_field :password, class: "form-control mb-4", placeholder: t(".password") %>
+
+      <div class="d-flex justify-content-around">
+        <div>
+          <div class="custom-control custom-checkbox">
+            <%= f.label :remember_me, class: "checkbox inline" do %>
+              <%= f.check_box :remember_me %>
+              <span><%= t ".remember_me" %></span>
+            <% end %>
+          </div>
+        </div>
+        <div>
+          <%= link_to t(".forgot_password"), "#" %>
+        </div>
+      </div>
+
+      <%= f.submit t(".sign_in"), class: "btn btn-info btn-block mb-4" %>
+
+  <% end %>
+  <%= t ".not_member" %><%= link_to t(".register"), "signup_path" %>
+</div>
