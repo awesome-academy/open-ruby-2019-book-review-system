@@ -1,7 +1,8 @@
 <% provide :title, t(".title") %>
 <div class="text-center border border-light p-5">
   <p class="h4 mb-4"><%= t ".sign_up" %></p>
-  <%= form_for :user, url: signup_path do |f| %>
+  <%= form_for @user, url: signup_path do |f| %>
+    <%= render "shared/error_messages", object: @user %>
 
     <%= f.text_field :name, class: "form-control mb-4", placeholder: t(".name") %>
 
