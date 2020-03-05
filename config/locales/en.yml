@@ -9,6 +9,10 @@ en:
       profile: "Profile"
       account: "My Account"
       log_out: "Log out"
+      home: "Home"
+      about: "About"
+      services: "Services"
+      contact: "Contact"
     footer:
       footer_content: "Footer Content"
       content: "CONTENT"
@@ -49,3 +53,18 @@ en:
       email: "E-mail"
       password: "Password"
       password_confirmation: "Password Confirmation"
+    create:
+      errors: "Cannot create an user, check the input and try again"
+      success: "Successfully registered"
+    show:
+      errors: "Fail Successfully"
+      fact: "Sum fact about myself"
+      follow: "Follow Me"
+      quote_or_something: "This call to action card is a great place to showcase some important information or display a clever tagline!"
+      post_name : "Card One"
+      content_post : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus."
+      more: "Read More"
+  shared:
+    error_messages:
+      contain: "The form contains"
+      error: "errors"
