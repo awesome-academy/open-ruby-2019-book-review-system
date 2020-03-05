@@ -8,9 +8,10 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:success] = t ".success"
+      login @user
       redirect_to @user
     else
-      flash.now[:danger] = t ".errors"
+      flash.now[:danger] = t ".danger"
       render :new
     end
   end
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
 
     return if @user
-    flash.now[:danger] = t ".errors"
+    flash.now[:danger] = t ".danger"
     redirect_to users_path
   end
 
