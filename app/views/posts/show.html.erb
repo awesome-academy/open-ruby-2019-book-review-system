@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-lg-8">
+    <h1 class="mt-4"><%= @post.title %></h1>
+    <p class="lead">
+      <%= t ".by" %>
+      <%= link_to @post.user_name, user_path(@post.user) %>
+    </p>
+    <hr>
+    <p><%= @post.created_at.strftime Settings.time_format  %></p>
+    <hr>
+    <%= image_tag Settings.picture.post, class: "img-fluid rounded" %>
+    <hr>
+    <p class="lead"><%= @post.content %></p>
+    <p><%= @post.content %></p>
+    <hr>
+    <div class="card my-4">
+      <h5 class="card-header"><%= t ".comment" %></h5>
+      <div class="card-body">
+        <%= form_for :post, url: post_path do |f| %>
+          <div class="form-group">
+            <%= f.text_field :content, class: "form-control mb-4",rows:"3", placeholder: t(".comment") %>
+          </div>
+          <%= f.submit t(".submit"), class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+    <%= render "posts/comments" %>
+  </div>
+  <%= render "shared/sidebar" %>
+</div>

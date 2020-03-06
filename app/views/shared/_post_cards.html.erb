@@ -1,0 +1,19 @@
+<% @posts.each do |post| %>
+  <div class="card mb-4">
+    <%= image_tag Settings.picture.post_card, class: "card-img-top", alt:"Card image cap" %>
+    <div class="card-body">
+      <h2 class="card-title">
+        <%= post.title %>
+      </h2>
+      <p class="card-text">
+        <%= t ".content" %>
+      </p>
+      <%= link_to t(".read_more"), post_path(post), class: "btn btn-primary" %>
+    </div>
+    <div class="card-footer text-muted">
+      <%= post.created_at.strftime Settings.time_format %>
+      <%= t ".by" %>
+      <%= link_to post.user_name, user_path(post.user) %>
+    </div>
+  </div>
+<% end %>

@@ -5,3 +5,12 @@ email:
   regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 password:
   min_length: 6
+paginate:
+  length: 5
+avatar:
+  comment: "http://placehold.it/50x50"
+  user_profile: "http://placehold.it/900x400"
+picture:
+  post: "http://placehold.it/900x300"
+  post_card: "http://placehold.it/750x300"
+time_format: "%H:%M %Y/%m/%d"

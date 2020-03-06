@@ -1,34 +1,9 @@
 <div class="row">
-
   <div class="col-md-8">
     <br/>
-    <%= render "shared/post_card" %>
+    <%= render "shared/post_cards" %>
+    <%= paginate @posts %>
   </div>
+  <%= render "shared/sidebar" %>
 
-  <div class="col-md-4">
-    <!-- Search Widget -->
-    <div class="card my-4">
-      <h5 class="card-header"><%= t ".search" %></h5>
-      <div class="card-body">
-        <div class="input-group">
-          <input type="text" class="form-control">
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button"><%= t".find" %></button>
-          </span>
-        </div>
-      </div>
-    </div>
-      <!-- Categories Widget -->
-    <div class="card my-4">
-      <h5 class="card-header"><%= t ".categories" %></h5>
-      <div class="card-body">
-      </div>
-    </div>
-      <!-- Side Widget -->
-    <div class="card my-4">
-      <h5 class="card-header"><%= t ".side_widget" %></h5>
-      <div class="card-body">
-      </div>
-    </div>
-  </div>
 </div>
