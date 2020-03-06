@@ -42,6 +42,9 @@ en:
       register: "Register"
       email: "E-mail"
       password: "Password"
+    create:
+      success: "Welcome Back!"
+      danger: "Wrong Password or Email"
   users:
     new:
       title: "Sign up"
@@ -54,10 +57,11 @@ en:
       password: "Password"
       password_confirmation: "Password Confirmation"
     create:
-      errors: "Cannot create an user, check the input and try again"
+      danger: "Cannot create an user, check the input and try again"
+      danger_login: "Cannot find user id"
       success: "Successfully registered"
     show:
-      errors: "Fail Successfully"
+      danger: "Fail Successfully"
       fact: "Sum fact about myself"
       follow: "Follow Me"
       quote_or_something: "This call to action card is a great place to showcase some important information or display a clever tagline!"
