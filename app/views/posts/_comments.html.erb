@@ -1,0 +1,11 @@
+<% @comments.each do |comment| %>
+  <div class="media mb-4">
+    <%= image_tag Settings.avatar.comment, class: "d-flex mr-3 rounded-circle" %>
+    <div class="media-body">
+      <h5 class="mt-0">
+        <%= comment.user_name %>
+      </h5>
+      <%= comment.content %>
+    </div>
+  </div>
+<% end %>

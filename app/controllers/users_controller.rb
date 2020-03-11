@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:success] = t ".success"
-      login @user
+      log_in @user
       redirect_to @user
     else
       flash.now[:danger] = t ".danger"
