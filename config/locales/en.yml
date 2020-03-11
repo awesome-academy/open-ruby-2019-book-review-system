@@ -65,15 +65,12 @@ en:
       post_name : "Card One"
       content_post : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus."
       more: "Read More"
-
   shared:
     error_messages:
       contain: "The form contains"
       error: "errors"
     post_card:
       by: "by"
-    sidebar:
-      find: "Find"
   posts:
     show:
       by: "By"

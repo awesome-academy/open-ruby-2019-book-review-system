@@ -3,12 +3,11 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
-  has_many :books
-  has_many :posts
-  has_many :comments
-  has_many :notifications
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
-  enum role: [:user, :manager, :admin]
+  enum role: {user: 0, manager: 1, admin: 2}
 
   validates :name, presence: true,
     length: {maximum: Settings.name.max_length}
