@@ -71,9 +71,17 @@ en:
       error: "errors"
     post_card:
       by: "by"
+    sidebar:
+      find: "Find"
   posts:
     show:
       by: "By"
       comment: "Leave a Comment"
       submit: "Submit"
       danger: "Cannot find post"
+  searchs:
+    show:
+      not_found_book: "THIS BOOK DOES NOT EXIST"
+      not_found_post: "NOT FOUND THE POST YOU NEED"
+      back: "Back to HomePage"
+      recomment: "Maybe Your Want To Write Some Review"
