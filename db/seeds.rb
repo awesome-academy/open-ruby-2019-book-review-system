@@ -12,12 +12,10 @@ end
   name = Faker::Book.genre
   Category.create!(name: name)
 end
-
-users = User.order(:created_at)
-users.each do |user|
+10.times do
   name = Faker::Book.title
   author = Faker::Book.author
-  user.books.create!(
+  Book.create!(
   name: name,
   author: author)
 end
