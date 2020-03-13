@@ -18,7 +18,7 @@
       <div class="card-body">
         <%= form_for :post, url: post_path do |f| %>
           <div class="form-group">
-            <%= f.text_field :content, class: "form-control mb-4",rows:"3", placeholder: t(".comment") %>
+            <%= f.text_field :content, class: "form-control mb-4", placeholder: t(".comment") %>
           </div>
           <%= f.submit t(".submit"), class: "btn btn-primary" %>
         <% end %>
