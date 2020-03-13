@@ -1,0 +1,11 @@
+<div class="card my-4">
+  <h5 class="card-header"><%= t ".comment" %></h5>
+  <div class="card-body" >
+    <%= form_for [@post, @post.comments.build], remote: true do |f| %>
+      <div class="form-group">
+        <%= f.text_field :content, class: "form-control mb-4", placeholder: t(".comment") %>
+      </div>
+      <%= f.submit t(".submit"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

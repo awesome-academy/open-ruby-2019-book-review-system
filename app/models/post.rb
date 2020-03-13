@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   has_many :pictures, dependent: :destroy
 
   delegate :name, to: :user, prefix: :user
+  delegate :name, to: :book, prefix: :book
 
   scope :order_desc, ->{order created_at: :desc}
 
