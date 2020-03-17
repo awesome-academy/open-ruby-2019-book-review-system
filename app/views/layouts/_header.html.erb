@@ -11,6 +11,7 @@
           <%= link_to t(".profile"), "#", class: "nav-link dropdown-toggle text-dark", data: {toggle: "dropdown"} , "aria-haspopup" => true, "aria-expanded" => false %>
           <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
             <%= link_to t(".account"), user_path(current_user), class: "dropdown-item" %>
+            <%= link_to t(".create_post"), new_post_path, class: "dropdown-item" %>
             <%= link_to t(".log_out"), logout_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

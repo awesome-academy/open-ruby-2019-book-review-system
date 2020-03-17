@@ -1,0 +1,22 @@
+<% provide :title, @book.name %>
+<div class="row align-items-center my-8 mb-4">
+  <div class="col-5 my-2">
+    <%= image_tag @book.resize_book_image, size: Settings.picture.book, class: "img-fluid rounded mb-4 mb-lg-0" %>
+  </div>
+  <div class="col-6">
+    <div class="text-center">
+      <br>
+      <br>
+      <h1 class="font-weight-light"></h1>
+      <p class="display-3"><%= @book.name %></p>
+      <p><%= @book.author %></p>
+    </div>
+    <br>
+    <div class="card text-white bg-secondary text-center">
+      <div class="card-body">
+        <p class="text-white m-0"><%= t ".quote_or_something_inspired " %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/post_cards_book" %>

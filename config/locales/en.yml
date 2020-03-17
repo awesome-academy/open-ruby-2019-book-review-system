@@ -1,9 +1,9 @@
 en:
   layouts:
     application:
-      title: "Book Review"
+      title: "Book Reviewer"
     header:
-      title: "Book Review"
+      title: "Book Reviewer"
       sign_up: "Signup"
       login: "Login"
       profile: "Profile"
@@ -21,6 +21,7 @@ en:
       author: "Author"
   static_pages:
     home:
+      title: "Book Reviewer"
       page_heading: "Page Heading"
       small_text: "Secondary Text"
       side_widget: "Side Widget"
@@ -77,3 +78,19 @@ en:
       comment: "Leave a Comment"
       submit: "Submit"
       danger: "Cannot find post"
+    new:
+      title: "Create Your Review"
+      book: "Book: "
+      title_book: "Title:"
+      content: "Content:"
+      not_have: "Not Have The Book You Want? "
+      choice: "Choice Your Book"
+      create: "CREATE POST"
+  books:
+    new:
+      author: "Author"
+      name: "Book Name"
+      category: "Choose Your Tag"
+      title: "Create Book"
+      picture: "Select your book picture: "
+      create_book: "CREATE BOOK"

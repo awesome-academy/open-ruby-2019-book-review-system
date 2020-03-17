@@ -8,10 +8,18 @@ password:
 paginate:
   length: 5
 avatar:
+  user_profile: "http://placehold.it/250x250"
   comment: "http://placehold.it/50x50"
-  user_profile: "http://placehold.it/900x400"
 picture:
   post: "http://placehold.it/900x300"
   post_card: "http://placehold.it/750x300"
 time_format: "%H:%M %Y/%m/%d"
-
+ckeditor:
+  toolbar: "mini"
+  color: "#AADC6E"
+  version: "//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"
+  resize_url_content: "800>"
+  resize_url_thumb: "118x100"
+picture_size:
+  book: "450x500"
+  resize: "460x500!"

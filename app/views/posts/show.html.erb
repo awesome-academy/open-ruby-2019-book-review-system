@@ -1,6 +1,7 @@
+<% provide :title, t(".title") %>
 <div class="row">
   <div class="col-lg-8">
-    <h1 class="mt-4"><%= @post.title %></h1>
+    <h1 class="mt-4"><%= (@post.title).html_safe %></h1>
     <p class="lead">
       <%= t ".by" %>
       <%= link_to @post.user_name, user_path(@post.user) %>
@@ -8,10 +9,7 @@
     <hr>
     <p><%= @post.created_at.strftime Settings.time_format  %></p>
     <hr>
-    <%= image_tag Settings.picture.post, class: "img-fluid rounded" %>
-    <hr>
-    <p class="lead"><%= @post.content %></p>
-    <p><%= @post.content %></p>
+    <p class= "row"><%= (@post.content).html_safe %></p>
     <hr>
     <div class="card my-4">
       <h5 class="card-header"><%= t ".comment" %></h5>
