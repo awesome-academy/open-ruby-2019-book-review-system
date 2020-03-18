@@ -1,4 +1,4 @@
-<% @comments.each do |comment| %>
+<% if comment.id.present? %>
   <div class="media mb-4">
     <%= image_tag Settings.avatar.comment, class: "d-flex mr-3 rounded-circle" %>
     <div class="media-body">

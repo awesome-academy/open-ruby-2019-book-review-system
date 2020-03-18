@@ -13,18 +13,14 @@
     <p class="lead"><%= @post.content %></p>
     <p><%= @post.content %></p>
     <hr>
-    <div class="card my-4">
-      <h5 class="card-header"><%= t ".comment" %></h5>
-      <div class="card-body">
-        <%= form_for :post, url: post_path do |f| %>
-          <div class="form-group">
-            <%= f.text_field :content, class: "form-control mb-4",rows:"3", placeholder: t(".comment") %>
-          </div>
-          <%= f.submit t(".submit"), class: "btn btn-primary" %>
-        <% end %>
-      </div>
+    <% if logged_in? %>
+      <%= render "posts/form" %>
+    <% end %>
+    <div class="comments" id= "comments_<%= @post.id %>">
+      <% if @post.comments.present? %>
+        <%= render @post.comments %>
+      <% end %>
     </div>
-    <%= render "posts/comments" %>
   </div>
   <%= render "shared/sidebar" %>
 </div>

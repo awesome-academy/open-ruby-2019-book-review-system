@@ -14,6 +14,7 @@
       <%= post.created_at.strftime Settings.time_format %>
       <%= t ".by" %>
       <%= link_to post.user_name, user_path(post.user) %>
+      <%= post.book_name %>
     </div>
   </div>
 <% end %>

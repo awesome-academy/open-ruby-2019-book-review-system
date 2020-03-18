@@ -12,6 +12,7 @@ end
   name = Faker::Book.genre
   Category.create!(name: name)
 end
+
 10.times do
   name = Faker::Book.title
   author = Faker::Book.author
@@ -27,23 +28,17 @@ books.each do |b|
     BookCategory.create!(book_id: b.id, category_id: c.id)
   end
 end
-
+books = Book.order(:created_at)
 users = User.order(:created_at)
-users.each do |user|
-user.posts.create!(
-  title: "Post of #{user.name}",
-  content: Faker::Lorem.sentence(5),
-  upvote: 2,
-  downvote: 1,
-  status: 0,
-  favorite: true,
-  book_id:1)
-end
-
-users = User.order(:created_at)
-users.each do |user|
-  post = Post.find_by(id: user.id)
-  user.comments.create!(
-    content: Faker::Lorem.paragraph,
-    post_id: post.id)
+books.each do |book|
+  users.each do |user|
+  user.posts.create!(
+    title: "Post of #{user.name}",
+    content: Faker::Lorem.sentence(5),
+    upvote: 2,
+    downvote: 1,
+    status: 1,
+    favorite: true,
+    book_id: book.id)
+  end
 end
