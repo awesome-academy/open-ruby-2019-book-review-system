@@ -20,12 +20,12 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
 
     return if @user
-
     flash.now[:danger] = t ".danger"
-    redirect_to users_path
+    redirect_to root_path
   end
 
   private
+
   def user_params
     params.require(:user).permit User::USER_PARAMS
   end

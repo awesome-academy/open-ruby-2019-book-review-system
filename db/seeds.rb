@@ -15,9 +15,13 @@ end
 10.times do
   name = Faker::Book.title
   author = Faker::Book.author
-  Book.create!(
+  book = Book.create!(
   name: name,
   author: author)
+  book.image.attach(
+    io: File.open("app/assets/images/book.jpg"),
+    filename: "file.jpg"
+  )
 end
 
 books = Book.order(:created_at)

@@ -1,0 +1,23 @@
+<% provide :title, t(".title") %>
+
+<%= form_for @post, url: posts_path do |f| %>
+  <div class="text-center border border-light p-4">
+    <p class="h4 mb-1 text-center"><%= t ".title" %></p>
+  </div>
+  <%= f.label t(".book") %>
+  <%= f.select(:book_id, Book.all.collect{|b| [b.name, b.id]}, blank: t(".choice")) %>
+  <%= link_to t(".not_have"), new_book_path %>
+  <hr>
+  <div class="field">
+    <%= f.label t(".title_book") %><br>
+    <%= f.cktext_area :title, rows:20 ,ckeditor: { uiColor: Settings.ckeditor.color, toolbar: Settings.ckeditor.toolbar } %>
+  </div>
+  <hr>
+  <div class="field">
+    <%= f.label t(".content") %><br>
+    <%= f.cktext_area :content %>
+  </div>
+  <br>
+  <%= f.submit t(".create"), class: "btn btn-info mb-4 btn-block" %>
+<% end %>
+

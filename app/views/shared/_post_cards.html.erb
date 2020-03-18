@@ -3,7 +3,10 @@
     <%= image_tag Settings.picture.post_card, class: "card-img-top", alt:"Card image cap" %>
     <div class="card-body">
       <h2 class="card-title">
-        <%= post.title %>
+        <%= (post.title).html_safe  %>
+        <h6>reviewing
+        <%= link_to post.book_name, book_path(post.book_id) %>
+      </h6>
       </h2>
       <p class="card-text">
         <%= t ".content" %>
